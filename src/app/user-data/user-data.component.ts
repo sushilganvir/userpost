@@ -17,8 +17,13 @@ export class UserDataComponent implements OnInit {
   ngOnInit(): void {
     this.user.getUser().subscribe(data => {
       this.userList = data
-      console.log(data)
     })
+
+
+  }
+
+  parent(user:any){
+      console.log(user)
   }
 
   

@@ -9,10 +9,10 @@
       </div>
 
     
-    <form action="post" #user="ngForm" (ngSubmit)="addUser(user)">
+    <form action="post" #user="ngForm" (ngSubmit)="addUser(user.value)">
       <div class="input-container">
         <label for="title">Add Title</label><br />
-        <input type="text" [(ngModel)]="title" name="title" id="title" /><br />
+        <input type="text" [(ngModel)]="title" name="title" id="title"  /><br/>
       </div>
       <div class="input-container">
         <label for="body">Add body</label><br />

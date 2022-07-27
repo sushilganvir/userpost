@@ -8,6 +8,7 @@ import { UserServiceService } from '../user-service.service';
 })
 export class FormComponent implements OnInit {
 
+  @Output() child:EventEmitter<any> = new EventEmitter();
 
   title:string = '';
   body:string = '';
@@ -17,16 +18,21 @@ export class FormComponent implements OnInit {
   constructor(public userData:UserServiceService) { }
 
   ngOnInit(): void {
+
+
+
   }
 
   onUserAdded(){}
 
   addUser(user:any){
-    this.userData.addUser(user.value).subscribe(newUser => {
-      console.log(newUser)
+    this.userData.addUser(user).subscribe(newUser => {
+      this.child.emit(newUser)
 
     })
   }
+
+ 
 
 
 }
