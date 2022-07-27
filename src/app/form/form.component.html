@@ -1,0 +1,27 @@
+<section>
+
+    
+  <div id="card-basic">
+
+    <div class="header">
+      <span></span>
+        <span><i class="bi bi-x" (click)="userData.showModel = false"></i></span>
+      </div>
+
+    
+    <form action="post" #user="ngForm" (ngSubmit)="addUser(user)">
+      <div class="input-container">
+        <label for="title">Add Title</label><br />
+        <input type="text" [(ngModel)]="title" name="title" id="title" /><br />
+      </div>
+      <div class="input-container">
+        <label for="body">Add body</label><br />
+        <input type="text" [(ngModel)]="body" name="body" id="body" /><br />
+      </div>
+
+      <div class="input-container">
+        <button type="submit">Add User</button>
+      </div>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,15 @@
+<div class="header">
+ <button (click)="user.showModel = true">Add User</button>
+</div>
+
+
+<table>
+  <tr class="info" *ngFor="let user of userList">
+    <td>{{ user.id }}</td>
+    <td>{{ user.title }}</td>
+    <td>{{ user.body }}</td>
+  </tr>
+</table>
+
+
+<app-form *ngIf="user.showModel"></app-form>
