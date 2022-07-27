@@ -22,7 +22,7 @@ export class UserDataComponent implements OnInit {
 
   }
 
-  parent(user:any){
+  userparent(user:any){
       console.log(user)
   }
 

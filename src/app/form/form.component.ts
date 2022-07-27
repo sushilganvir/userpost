@@ -8,7 +8,7 @@ import { UserServiceService } from '../user-service.service';
 })
 export class FormComponent implements OnInit {
 
-  @Output() child:EventEmitter<any> = new EventEmitter();
+  @Output() form:EventEmitter<any> = new EventEmitter();
 
   title:string = '';
   body:string = '';
@@ -27,7 +27,7 @@ export class FormComponent implements OnInit {
 
   addUser(user:any){
     this.userData.addUser(user).subscribe(newUser => {
-      this.child.emit(newUser)
+      this.form.emit(newUser)
 
     })
   }
